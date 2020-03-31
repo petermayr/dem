@@ -22,7 +22,7 @@ var crypto = require('crypto');
 
 var url = "mongodb+srv://justadmin:yEI78GWu1esd@cluster0-asdgj.mongodb.net/sholix?retryWrites=true&w=majority";
 
-const port = process.env.PORT || 3000
+var port = process.env.PORT || 3000
 
 //Create Express Service
 var app = express();
