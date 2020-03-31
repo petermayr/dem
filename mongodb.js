@@ -22,6 +22,8 @@ var crypto = require('crypto');
 
 var url = "mongodb+srv://justadmin:yEI78GWu1esd@cluster0-asdgj.mongodb.net/sholix?retryWrites=true&w=majority";
 
+const port = process.env.PORT || 3000
+
 //Create Express Service
 var app = express();
 app.use(bodyParser.json());
@@ -160,8 +162,8 @@ MongoClient.connect(url,{useNewUrlParser: true}, function(err, client){
         }); 
  
         //Start Web Server
-        app.listen(3000,()=>{
-            console.log('Connected to Mongo Server, WebService running on port 3000.');
+        app.listen(port,()=>{
+            console.log('Connected to Mongo Server, WebService running on port '+port);
         })
     }
 }) 
